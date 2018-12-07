@@ -2,12 +2,9 @@
 
 import random
 
-def SortTestHelp(sum, rangeL, rangeR):
+def sort_test_helper(sum, rangeL, rangeR):
     arr = []
     for x in range(0, sum):
         a = int(random.random() * (rangeR - rangeL + 1) + rangeL)
         arr.append(a)
     return arr
-
-r = SortTestHelp(100, 0, 100)
-print(r)
