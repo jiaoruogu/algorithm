@@ -10,12 +10,12 @@ result = sort_test_helper(50, 0, 1000)
 
 # 下面是选择排序
 print(result)
-for j in (0, len(result)-1):
+for j in range(0, len(result)):
     x = j
-    for i in range(1, len(result)-1):
+    for i in range(j + 1, len(result)):
         if result[i] < result[x]:
             x = i
-    result[j] = result[x]
+    result[j],result[x] = result[x],result[j]
 
 
 print(result)
