@@ -4,7 +4,7 @@ description: 这是第一页，介绍这本书。
 
 # 首页
 
-{% api-method method="delete" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="post" host="https://api.cakes.com" path="/v1/cakes/:id" %}
 {% api-method-summary %}
 Get Cakes
 {% endapi-method-summary %}
