@@ -33,6 +33,10 @@ public class SelectionSort {
         }
     }
 
+    public static <E extends Comparable<E>> void sort2(E[], arr) {
+    }
+
+
     private static <E> void swap(E[] arr, int i, int j) {
         E t = arr[i];
         arr[i] = arr[j];

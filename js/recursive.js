@@ -19,7 +19,7 @@ function recursive(n) {
   return n * recursive(n - 1)
 }
 
-console.log(recursive(5));
+// console.log(recursive(5));
 
 
 let test = [
@@ -70,5 +70,27 @@ function ergodic(tree) {
   }
 }
 
-ergodic(test)
-console.log(JSON.stringify(test, null, 2));
+// ergodic(test)
+// console.log(JSON.stringify(test, null, 2));
+
+
+function factorial2 (n) {
+  if (n === 1) {
+    return n
+  }
+  return n + factorial2(n - 1)
+}
+
+
+function endFactorial(n, total = 1) {
+
+  if (n == 1) {
+    return total
+  }
+
+  return endFactorial(n - 1, n * total)
+
+
+}
+
+console.log(endFactorial(5))
