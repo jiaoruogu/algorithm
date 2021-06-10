@@ -33,7 +33,18 @@ public class SelectionSort {
         }
     }
 
-    public static <E extends Comparable<E>> void sort2(E[], arr) {
+    public static <E extends Comparable<E>> void sort2(E[] arr) {
+
+        for (int i = arr.length - 1; i > 0;i--) {
+            int maxIndex = i;
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[j].compareTo(arr[maxIndex]) > 0) {
+                    maxIndex = j;
+                }
+            }
+            swap(arr, i, maxIndex);
+        }
+
     }
 
 
