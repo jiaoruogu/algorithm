@@ -25,7 +25,7 @@ function selectionSort2(arr) {
   for (let i = 0; i < arr.length; i++) {
     let minIndex = i
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] > arr[j]) minIndex = j
+      if (arr[minIndex] > arr[j]) minIndex = j
     }
     const temp = arr[i]
     arr[i] = arr[minIndex]
@@ -39,7 +39,7 @@ function selectionSort3(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     let maxIndex = i
     for (let j = i - 1; j >= 0; j--) {
-      if(arr[i] < arr[j]) maxIndex = j
+      if(arr[maxIndex] < arr[j]) maxIndex = j
     }
     const temp = arr[i]
     arr[i] = arr[maxIndex]
@@ -48,6 +48,6 @@ function selectionSort3(arr) {
   }
 }
 
-selectionSort3(list2)
+selectionSort2(list2)
 console.log(list2)
 
