@@ -14,7 +14,7 @@ function sort1 (arr) {
   }
 }
 
-// 循环不变量(i,n]
+// 循环不变量[i,n)
 function sort2 (arr) {
   for(let i = 0; i < arr.length; i++) {
     for(let j = arr.length - 1; j>i; j--) {
