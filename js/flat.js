@@ -31,7 +31,7 @@ function flat2 (arr) {
 console.log(flat2(list));
 
 
-// 迭代 
+// 迭代
 function flat3(arr) {
   while(arr.some(Array.isArray)) {
     arr = Array.prototype.concat.apply([], arr)
@@ -40,3 +40,35 @@ function flat3(arr) {
 }
 
 console.log(flat3(list));
+
+
+let person = {
+  name: 'jet',
+  b: {
+    c: 'c',
+    d: [{
+      e: {
+        f: 'f-end'
+      }
+    }]
+  },
+  g: [1,3,4,6],
+  h: {
+    i: '123',
+    j: 'i love mature lady'
+  }
+}
+
+function deepClone(obj) {
+  if (typeof obj === 'number' || typeof obj === 'string' || typeof obj === 'boolean' || obj === undefined || obj === null) {
+    return obj
+  }
+  let object = obj.constructor === Array ? [] : {}
+
+  for (let key in obj) {
+    typeof obj[key] === 'object' ? object[key] = arguments.callee(obj[key]) : object[key] = obj[key]
+  }
+  return object
+}
+
+
