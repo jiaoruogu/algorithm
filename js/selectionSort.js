@@ -41,13 +41,13 @@ function selectionSort3(arr) {
     for (let j = i - 1; j >= 0; j--) {
       if(arr[maxIndex] < arr[j]) maxIndex = j
     }
-    const temp = arr[i]
-    arr[i] = arr[maxIndex]
-    arr[maxIndex] = temp
-
+    // const temp = arr[i]
+    // arr[i] = arr[maxIndex]
+    // arr[maxIndex] = temp
+    [arr[i], arr[maxIndex]] = [arr[maxIndex], arr[i]]
   }
 }
 
-selectionSort2(list2)
+selectionSort(list2)
 console.log(list2)
 

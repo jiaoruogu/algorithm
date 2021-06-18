@@ -24,9 +24,10 @@ function sort2 (arr) {
 }
 
 function swap(arr, i, j) {
-  const temp = arr[i]
-  arr[i] = arr[j]
-  arr[j] = temp
+  // const temp = arr[i]
+  // arr[i] = arr[j]
+  // arr[j] = temp
+  [arr[i], arr[j]] = [arr[j], arr[i]]
 }
 
 
